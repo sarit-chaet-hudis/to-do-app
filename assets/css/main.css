@@ -1,7 +1,19 @@
-.heading,
-button {
-  text-align: center;
-  font-family: "Josefin Sans", sans-serif; }
-
 * {
   font-family: "Open Sans", sans-serif; }
+
+header {
+  width: 60%;
+  margin: auto;
+  text-align: center; }
+
+.fontTitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700; }
+
+.listCont {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column; }
+  .listCont .newTask {
+    display: flex; }
