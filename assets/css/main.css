@@ -1,5 +1,6 @@
 * {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5; }
 
 header {
   width: 60%;
@@ -8,7 +9,8 @@ header {
 
 .fontTitle {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  color: hotpink; }
 
 .listCont {
   width: 60%;
@@ -17,3 +19,5 @@ header {
   flex-direction: column; }
   .listCont .newTask {
     display: flex; }
+    .listCont .newTask input {
+      height: 2rem; }

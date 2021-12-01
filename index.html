@@ -20,25 +20,37 @@
       <h1 class="fontTitle">Smart To Do List</h1>
       <h2>Plan for each mode: Focus, Chill, On the Go</h2>
       <p>Focus mode is your most precious resource. Use it wisely!</p>
-      <p>Chill is your casual/scatterbrain mode. Perfect for simple tasks.</p>
       <p>
-        On the go (commuting, walking or excercising) is great for listning,
-        conversing and brainstorming
+        Chill is your casual/scatterbrain mode. Perfect for simple or repetitive
+        tasks.
       </p>
+      <p>On the go is great for listening, conversing and brainstorming.</p>
     </header>
     <main>
       <div class="listCont">
         <h2 class="fontTitle">To Do..</h2>
         <div class="newTask">
-          <div class="inputTask"><input type="text" id="#newTaskInput" placeholder="Type task here" required></div>
-          <button class="fontTitle">Add task</button>
+          <div class="inputTask">
+            <form action="">
+              <input
+                type="text"
+                id="taskToCreate"
+                placeholder="Type task here"
+                required="required"
+              />
+            </div>
+            <button class="fontTitle createTaskButton" type="submit" >
+              Add
+            </button>
+            </form>
         </div>
-        <div class="taskList">
-          <p>first task</p>
-          <p>task</p>
-          <p>last task</p>
+        <div class="taskListCont">
+          <ul class="taskList">
+            
+          </ul>
         </div>
       </div>
     </main>
+    <script src="/index.js"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 * {
   font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
 }
 
 header {
@@ -11,6 +12,7 @@ header {
 .fontTitle {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
+  color: hotpink;
 }
 
 .listCont {
@@ -18,9 +20,12 @@ header {
   margin: auto;
   display: flex;
   flex-direction: column;
-  
-.newTask {
-  
-  display: flex;
-}
+
+  .newTask {
+    display: flex;
+
+    input {
+      height: 2rem;
+    }
+  }
 }
