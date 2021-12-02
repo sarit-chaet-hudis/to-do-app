@@ -1,18 +1,31 @@
-// window.addEventListener("DOMContentLoaded", init);
-// function init() {
-//   localStorage.setItem("taskList", {});
 const createTaskButton = document.querySelector(".createTaskButton");
-const taskList = document.querySelector(".taskList");
-console.log(taskList);
+const taskListUL = document.querySelector(".taskList");
+let listFromStorage;
+if (localStorage.getItem("listItems")) {
+  //localstorage already has list
+  listItems = JSON.parse(localStorage.getItem("listItems"));
+} else {
+  listItems = [];
+}
+// localStorage.setItem("listItems", JSON.stringify(listItems));
+const taskInput = document.querySelector("#taskToCreate");
 createTaskButton.addEventListener("click", createTask);
+refreshList();
 
 function createTask(e) {
-  e.preventDefault();
-  const taskInput = document.querySelector("#taskToCreate");
-  const newTask = `<li>${taskInput.value}</li>`;
+  e.preventDefault(); //stop from refreshing
+  //   const newTask = document.createElement("li");
+  newTask = `<li>${taskInput.value}</li>`;
+  listItems.push(newTask);
+  localStorage.setItem("listItems", JSON.stringify(listItems));
   taskInput.value = "";
-  taskList.innerHTML = newTask;
+  refreshList();
+}
 
-  //   localStorage.taskList.setItem("1", newTaskInput);
-  //   console.log(localStorage.getItem("taskList"));
+function refreshList() {
+  taskListUL.innerHTML = "";
+  for (let i = 0; i < listItems.length; i++) {
+    taskListUL.innerHTML += listItems[i];
+  }
+  console.log("finished refresh");
 }
